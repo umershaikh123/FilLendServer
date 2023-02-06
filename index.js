@@ -22,20 +22,14 @@ app.use(function (req, res, next) {
 
 let dataArray = [];
 
-app.post(
-  "https://fil-lend-server-3lxeozrph-umershaikh123.vercel.app/api/",
-  (req, res) => {
-    console.log(req.body);
-    dataArray.push(req.body);
-  }
-);
+app.post("/", (req, res) => {
+  console.log(req.body);
+  dataArray.push(req.body);
+});
 
-app.get(
-  "https://fil-lend-server-3lxeozrph-umershaikh123.vercel.app/api/",
-  (req, res) => {
-    res.json(dataArray);
-  }
-);
+app.get("/", (req, res) => {
+  res.json(dataArray);
+});
 
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
