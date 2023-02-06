@@ -22,12 +22,12 @@ app.use(function (req, res, next) {
 
 let dataArray = [];
 
-app.post("/LenderData", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
   dataArray.push(req.body);
 });
 
-app.get("/LenderData", (req, res) => {
+app.get("/", (req, res) => {
   res.json(dataArray);
 });
 
