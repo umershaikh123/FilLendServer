@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 let dataArray = [];
 
 app.post(
-  "https://fil-lend-server-3lxeozrph-umershaikh123.vercel.app/",
+  "https://fil-lend-server-3lxeozrph-umershaikh123.vercel.app/api/",
   (req, res) => {
     console.log(req.body);
     dataArray.push(req.body);
@@ -31,7 +31,7 @@ app.post(
 );
 
 app.get(
-  "https://fil-lend-server-3lxeozrph-umershaikh123.vercel.app/",
+  "https://fil-lend-server-3lxeozrph-umershaikh123.vercel.app/api/",
   (req, res) => {
     res.json(dataArray);
   }
